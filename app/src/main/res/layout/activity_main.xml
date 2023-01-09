@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ui.activitites.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/mainToolbar"
+            style="@style/Theme.ImageAPPCDMX"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:elevation="4dp"
+            android:theme="@style/Theme.ImageAPPCDMX"
+            app:contentInsetStart="0dp"
+            app:title="">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_poc_module_cartelera" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/app_cdmx_logo" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+</LinearLayout>
+
+
