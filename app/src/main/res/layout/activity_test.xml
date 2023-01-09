@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/carne"
+    android:background="@color/carnitas"
     android:orientation="vertical"
     android:theme="@style/Theme.ImageAPPCDMX"
     tools:context=".ui.activitites.TestActivity">
@@ -32,7 +33,7 @@
                 android:adjustViewBounds="true"
                 android:padding="8dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_poc_module_cartelera" />
+                android:src="@drawable/app_cdmx_logo" />
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.activitites.MainActivity">
+    tools:context=".ui.activitites.MainActivity"
+    android:background="@color/carnitas"
+    android:theme="@style/Theme.ImageAPPCDMX">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -13,6 +16,7 @@
         android:fitsSystemWindows="false">
 
         <androidx.appcompat.widget.Toolbar
+
             android:id="@+id/mainToolbar"
             style="@style/Theme.ImageAPPCDMX"
             android:layout_width="match_parent"
@@ -30,18 +34,17 @@
                 android:adjustViewBounds="true"
                 android:padding="8dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_poc_module_cartelera" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:adjustViewBounds="true"
-                android:padding="8dp"
-                android:scaleType="centerInside"
                 android:src="@drawable/app_cdmx_logo" />
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Segunda actividad"/>
+
 </LinearLayout>
 
 

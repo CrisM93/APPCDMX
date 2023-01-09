@@ -5,11 +5,16 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import mx.gob.cdmx.adip.apps.imageappcdmx.R;
 
 public class MainActivity extends AppCompatActivity {
 //ESTOY EN LA RAMA DE PRUEBAS
+private Button button2;
+    private static final String LOG_TAG =MainActivity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +28,15 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
 
-        Intent segundaactividad= new Intent(this, TestActivity.class);
-        startActivity(segundaactividad);
+        button2=findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                 Intent intent = new Intent(MainActivity.this, TestActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
