@@ -9,7 +9,7 @@ import android.os.Bundle;
 import mx.gob.cdmx.adip.apps.imageappcdmx.R;
 
 public class MainActivity extends AppCompatActivity {
-
+//ESTOY EN EL MASTER DE LA APP
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
