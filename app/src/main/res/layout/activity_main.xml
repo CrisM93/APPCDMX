@@ -37,13 +37,16 @@
                 android:src="@drawable/app_cdmx_logo" />
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
+
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_margin="16dp"
         android:layout_marginRight="16dp"
-        android:text="Segunda actividad"/>
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:text="Segunda actividad" />
 
 </LinearLayout>
 

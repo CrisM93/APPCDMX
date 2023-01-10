@@ -32,7 +32,7 @@ private Button button2;
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                 Intent intent = new Intent(MainActivity.this, TestActivity.class);
+                Intent intent = new Intent(MainActivity.this, TestActivity.class);
                 startActivity(intent);
             }
         });

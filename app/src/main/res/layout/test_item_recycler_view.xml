@@ -29,7 +29,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.4"
-                tools:src="@drawable/ic_poc_module_cartelera"
+                android:src="@drawable/ic_poc_module_cartelera"
                 android:adjustViewBounds="true"
                 android:scaleType="centerInside" />
 
@@ -55,6 +55,18 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     tools:text="Este es el subtitulo" />
+
+                <Button
+                    android:id="@+id/button_coment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Coment"/>
+                <Button
+                    android:id="@+id/button_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Like"/>
+
 
             </LinearLayout>
         </LinearLayout>

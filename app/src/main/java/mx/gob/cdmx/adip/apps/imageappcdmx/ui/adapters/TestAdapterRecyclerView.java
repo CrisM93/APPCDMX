@@ -1,11 +1,15 @@
 package mx.gob.cdmx.adip.apps.imageappcdmx.ui.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
@@ -40,6 +44,7 @@ public class TestAdapterRecyclerView extends RecyclerView.Adapter<TestAdapterRec
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Test test = data.get(position);
+        Log.d("URL", data.get(position).getUrlImage());
         holder.tvTitle.setText(test.getTitulo());
         holder.tvSubtitle.setText(test.getDescription());
         Glide.with(context).load(data.get(position).getUrlImage()).into(holder.img);
@@ -54,26 +59,44 @@ public class TestAdapterRecyclerView extends RecyclerView.Adapter<TestAdapterRec
         CardView cardView;
         ImageView img;
         TextView tvTitle, tvSubtitle;
-
+        Button button_coment, button_like;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            button_coment=itemView.findViewById(R.id.button_coment);
+            button_like=itemView.findViewById(R.id.button_like);
             cardView = itemView.findViewById(R.id.cardView);
             img = itemView.findViewById(R.id.img);
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvSubtitle = itemView.findViewById(R.id.tvSubtitle);
             cardView.setOnClickListener(this);
+            button_coment.setOnClickListener(this);
+            button_like.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(context, "Clic en button like", Toast.LENGTH_SHORT).show();
+                }
+            });
         }
 
         @Override
         public void onClick(View view) {
-            if(view.getId() == R.id.cardView){
+
+            if(view.getId() == R.id.button_coment){
                 Test test = data.get(getAdapterPosition());
-                listener.onItemClick(view, test);
+                //listener.onItemClick(view, test);
+                listener.onItemComent(view, test);
+            }else if(view.getId() == R.id.button_like){
+                Test test = data.get(getAdapterPosition());
+                listener.onItemLike(view, test);
+            }else if(view.getId()==R.id.cardView){
+                Toast.makeText(context, "Valores", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
     public interface OnItemClickListener {
-        void onItemClick(View view, Test test);
+        //void onItemClick(View view, Test test);
+        void onItemComent(View view, Test test);
+        void onItemLike(View view, Test test);
     }
 }

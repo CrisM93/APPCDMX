@@ -5,14 +5,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
-
 import java.util.ArrayList;
-
 import mx.gob.cdmx.adip.apps.imageappcdmx.R;
 import mx.gob.cdmx.adip.apps.imageappcdmx.model.Test;
 import mx.gob.cdmx.adip.apps.imageappcdmx.ui.adapters.TestAdapterRecyclerView;
@@ -49,9 +46,16 @@ public class TestActivity extends AppCompatActivity {
                 data,
                 new TestAdapterRecyclerView.OnItemClickListener() {
                     @Override
-                    public void onItemClick(View view, Test test) {
+                    public void onItemComent(View view, Test test) {
                         Toast.makeText(TestActivity.this, test.getTitulo(), Toast.LENGTH_SHORT).show();
                     }
+
+                    @Override
+                    public void onItemLike(View view, Test test) {
+                        Toast.makeText(TestActivity.this, test.getTitulo(), Toast.LENGTH_SHORT).show();
+                    }
+
+
                 });
         rv.setLayoutManager(new GridLayoutManager(this, 2));
         rv.setAdapter(adapter);
