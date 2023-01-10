@@ -30,9 +30,9 @@
                 android:layout_height="48dp"
                 android:layout_gravity="center"
                 android:adjustViewBounds="true"
-                android:padding="8dp"
+                android:padding="0.5dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_poc_module_cartelera" />
+                android:src="@drawable/home_app_logo" />
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -53,7 +53,7 @@
                 android:layout_height="match_parent"
                 android:clipToPadding="true"
                 android:padding="8dp"
-                tools:itemCount="1"
+                tools:itemCount="2"
                 tools:listitem="@layout/test_item_recycler_view" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package mx.gob.cdmx.adip.apps.imageappcdmx.ui.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,7 +44,9 @@ public class TestAdapterRecyclerView extends RecyclerView.Adapter<TestAdapterRec
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        Log.d("position------", String.valueOf(position));
         Test test = data.get(position);
+        Log.d("URI__________", data.get(position).getUrlImage());
         holder.tvTitle.setText(test.getTitulo());
         holder.tvSubtitle.setText(test.getDescription());
         Glide.with(context).load(data.get(position).getUrlImage()).into(holder.img);

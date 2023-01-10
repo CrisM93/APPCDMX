@@ -30,16 +30,9 @@
                 android:adjustViewBounds="true"
                 android:padding="8dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_poc_module_cartelera" />
+                android:src="@drawable/home_app_logo" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:adjustViewBounds="true"
-                android:padding="8dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/app_cdmx_logo" />
+
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
 </LinearLayout>

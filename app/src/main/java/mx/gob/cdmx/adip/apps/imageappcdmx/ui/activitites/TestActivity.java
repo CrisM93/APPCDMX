@@ -43,6 +43,11 @@ public class TestActivity extends AppCompatActivity {
         data.add(new Test("Primer 2", "https://media.kasperskydaily.com/wp-content/uploads/sites/87/2019/12/11132630/android-device-identifiers-featured.jpg", "Descripción 2"));
         data.add(new Test("Primer 3", "https://www.adslzone.net/app/uploads-adslzone.net/2019/12/android-malware-apps.jpg?x=480&y=375&quality=40", "Descripción 3"));
         data.add(new Test("Primer 4", "https://www.muycomputer.com/wp-content/uploads/2019/12/android-1000x600.jpg", "Descripción 4"));
+        data.add(new Test("Primer 5", "", "Descripción 5"));
+        data.add(new Test("Primer 6", "", "Descripción 6"));
+        System.out.println("---------------------------"  + data);
+        System.out.println("---------------------------"  + data.get(0));
+        System.out.println("---------------------------"  + data.size());
 
         adapter = new TestAdapterRecyclerView(
                 this,
