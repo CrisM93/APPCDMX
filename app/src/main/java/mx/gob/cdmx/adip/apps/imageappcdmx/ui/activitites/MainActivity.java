@@ -12,7 +12,7 @@ import android.widget.Button;
 import mx.gob.cdmx.adip.apps.imageappcdmx.R;
 
 public class MainActivity extends AppCompatActivity {
-//ESTOY EN LA RAMA DE PRUEBAS COMPLETA
+//ESTOY EN LA RAMA DE PRUEBAS COMPLETA f
 private Button button2;
     private static final String LOG_TAG =MainActivity.class.getSimpleName();
     @Override
